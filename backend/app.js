@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
@@ -9,7 +11,7 @@ const cors = require('cors');
 // Public folder for images
 // app.use(express.static('public'))
 
-const port = 5000;
+const port = process.env.PORT;
 
 
 
