@@ -4,8 +4,6 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 
-// Solve CORS
-// app.use(cors({ credentials: true, origin: 'http://localhost:3000' }))
 // const mysql = require('./db/conn')
 
 // Public folder for images
@@ -18,6 +16,15 @@ const app = express();
 // config JSON form-data response
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+// Solve CORS
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }))
+
+// Upload diretory
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+
+// DB connection
+require('./config/db.js');
 
 // router
 const router = require('./routes/Router.js');
