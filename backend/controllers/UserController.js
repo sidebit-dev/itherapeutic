@@ -7,7 +7,7 @@ const jwtSecret = process.env.JWT_SECRET;
 
 // Generate user token
 const generateToken = (id) => {
-    return jwt.sign({id}, jwtSecret, {
+    return jwt.sign({ id }, jwtSecret, {
         expiresIn: '7d',
     });
 };
