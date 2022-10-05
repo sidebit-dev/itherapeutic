@@ -1,5 +1,5 @@
-const { default: mongoose } = require('mongoose');
-const mogoose = require('mongoose');
+//const { default: mongoose } = require('mongoose');
+const mongoose = require('mongoose');
 
 //connection
 const dbUser = process.env.DB_USER;

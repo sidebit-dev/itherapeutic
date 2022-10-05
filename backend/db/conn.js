@@ -15,4 +15,4 @@ conn.connect(function(err){
     console.log('Conectou ao MySql!')    
 })
 
-module.exports = mysql
+module.exports = mysql;
